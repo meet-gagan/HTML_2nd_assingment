@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM2</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #ed2121;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            form {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width:1200px;
+                text-align: center;
+            }
+            input, textarea, select {
+                width: 50%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            input[type="date"] {
+                width: 50%;
+                padding: 10px;
+            }
+            input[type="radio"], input[type="checkbox"] {
+                margin-right: 5px;
+            }
+            button {
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            button[type="reset"] {
+                background-color: #f44336;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h2>E-commerce app registration</h2> <br>
+            <input type="text" placeholder="First Name" required>
+            <br>
+            <input type="text" placeholder="Last Name" required>
+            <br>
+            <input type="email" placeholder="Enter email" required pattern="^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$">
+            <br>
+            <input type="password" placeholder="Create password" required minlength="5" maxlength="8">
+            <br>
+            <input type="tel" placeholder="Enter contact" required pattern="^[789]\d{9}$" minlength="10" maxlength="12">
+            <br>
+            <input type="date">
+            <br>
+            <textarea cols="30" rows="5" placeholder="Address"></textarea>
+            <br>
+            <h4>Gender:</h4>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            <br>
+                
+            <br>
+            City:
+                <select>
+                    <option>None</option>
+                    <option>Mumbai</option>
+                    <option>Navi Mumbai</option>
+                    <option>Delhi</option>
+                    <option>Andhra Pradesh</option>
+                </select>
+            <br>
+            
+            <br>
+            <button type="submit">Register</button>
+            <button type="reset">Clear form</button>
+        </form>
+    </body>
+    </html>
